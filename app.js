@@ -27,4 +27,4 @@ app.use(express.static(`${__dirname}/views/`));
 require('./routes/main')(app);
 
 // Event listener checking for client connections to the server
-app.listen((port || 8000), () => console.log(`Listening on port ${port}.`));
+app.listen((port || 8000), () => console.log(`Listening on port: ${port}.`));
