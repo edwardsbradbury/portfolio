@@ -1,0 +1,16 @@
+{
+  "name": "portfolio2",
+  "version": "1.0.0",
+  "description": "Ed Bradbury's personal professional portfolio",
+  "main": "server.js",
+  "author": "Ed Bradbury",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "14.17.1",
+    "npm": "7.19.0"
+  }
+}
