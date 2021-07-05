@@ -14,17 +14,17 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 // Specify the directory holding the page templates which will be returned to clients
-app.set('views', __dirname + '/views');
+app.use(serveStatic(__dirname + "/dist"));
 
-// Configure rendering engine
-app.set('view engine', 'ejs');
-app.engine('html', require('ejs').renderFile);
+// // Configure rendering engine
+// app.set('view engine', 'ejs');
+// app.engine('html', require('ejs').renderFile);
 
-// Allows linking of CSS stylesheet in HTML page head
-app.use(express.static(`${__dirname}/views/`));
+// // Allows linking of CSS stylesheet in HTML page head
+// app.use(express.static(`${__dirname}/views/`));
 
-// Import the routing from routes/main.js
-require('./routes/main')(app);
+// // Import the routing from routes/main.js
+// require('./routes/main')(app);
 
 // Event listener checking for client connections to the server
 app.listen((port || 8000), () => console.log(`Listening on port: ${port}.`));
