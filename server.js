@@ -28,9 +28,9 @@ app.use(serveStatic(`${__dirname}/client/dist`));
 // // Import the routing from routes/main.js
 // require('./routes/main')(app);
 
-app.get('/', function(req, res) {
-  res.sendFile(`${__dirname}/client/dist/index.html`);
-})
+// app.get('/', function(req, res) {
+//   res.sendFile(`${__dirname}/client/dist/index.html`);
+// })
 
 // Event listener checking for client connections to the server
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
