@@ -23,10 +23,14 @@ app.use(serveStatic(`${__dirname}/client/dist`));
 // app.engine('html', require('ejs').renderFile);
 
 // // Allows linking of CSS stylesheet in HTML page head
-// app.use(express.static(`${__dirname}/views/`));
+// app.use(express.static(`${__dirname}/views/`));  
 
 // // Import the routing from routes/main.js
 // require('./routes/main')(app);
 
+app.get('/', function(req, res) {
+  res.sendFile(`${__dirname}/client/dist/index.html`);
+})
+
 // Event listener checking for client connections to the server
-app.listen((port || 8000), () => console.log(`Listening on port: ${port}.`));
+app.listen(port, () => console.log(`Listening on port: ${port}.`));
