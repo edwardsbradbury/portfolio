@@ -3,8 +3,6 @@
 // Import the Express library
 const express = require('express');
 
-// const serveStatic = require('serve-static');
-
 // Create new Express app instance
 const app = express();
 
@@ -15,23 +13,8 @@ const port = process.env.PORT;
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-// Specify the directory holding the page templates which will be returned to clients
-// app.use(serveStatic(`${__dirname}/client/dist`));
+// Specify the directory holding the HTML file into which the root App component will be injected
 app.use(express.static(`${__dirname}/client/dist`));
-
-// // Configure rendering engine
-// app.set('view engine', 'ejs');
-// app.engine('html', require('ejs').renderFile);
-
-// // Allows linking of CSS stylesheet in HTML page head
-// app.use(express.static(`${__dirname}/views/`));  
-
-// // Import the routing from routes/main.js
-// require('./routes/main')(app);
-
-// app.get('/', function(req, res) {
-//   res.sendFile(`${__dirname}/client/dist/index.html`);
-// })
 
 // Event listener checking for client connections to the server
 app.listen(port, () => console.log(`Listening on port: ${port}.`));
