@@ -1,10 +1,9 @@
 <template>
   <div id="nav">
     <router-link to="/">CV</router-link> |
-    <!-- <router-link to="/about">About</router-link> | -->
-    <router-link to="mailto:edwardsbrdbury@gmail.com">Email me</router-link> |
-    <router-link to="">LinkedIn</router-link> |
-    <router-link to="">GitHub</router-link>
+    <a href="mailto:edwardsbrdbury@gmail.com">Email me</a> |
+    <a href="www.linkedin.com/in/ed-bradbury-639366216">LinkedIn</a> |
+    <a href="https://github.com/edwardsbradbury">GitHub</a>
   </div>
   <router-view />
 </template>
