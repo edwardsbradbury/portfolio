@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     
-    <Header />
+    <Header :mode="mode" @updateMode="changeMode"/>
     
     <Projects v-if="mode === 'projects'" />
 
@@ -26,6 +26,15 @@ export default {
   data() {
     return {
       mode: "projects"
+    }
+  },
+  methods: {
+    changeMode() {
+      if (this.mode === "projects") {
+        this.mode = "CV";
+      } else {
+        this.mode = "projects";
+      }
     }
   }
 };
