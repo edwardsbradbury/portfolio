@@ -1,15 +1,15 @@
 <template>
-  <div id="header">
+  <div id='header'>
 
-    <div id="portrait">
-
+    <div id='bio'>
+      <h1>Ed Bradbury</h1>
     </div>
 
-    <div id="nav">
-      <router-link to="/" @click="$emit('updateMode')">{{linkText}}</router-link> |
-      <a href="mailto:edwardsbrdbury@gmail.com" target="_blank">Email me</a> |
-      <a href="https://www.linkedin.com/in/ed-bradbury-639366216" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/edwardsbradbury" target="_blank">GitHub</a>
+    <div id='nav'>
+      <router-link to='/' @click="$emit('updateMode')">{{linkText}}</router-link> |
+      <a href='mailto:edwardsbrdbury@gmail.com' target='_blank'>Email me</a> |
+      <a href='https://www.linkedin.com/in/edwardsbradbury' target='_blank'>LinkedIn</a> |
+      <a href='https://github.com/edwardsbradbury' target='_blank'>GitHub</a>
     </div>
     
   </div>

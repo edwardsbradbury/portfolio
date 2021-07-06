@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
+  <div class='home'>
     
     <Header :mode="mode" @updateMode="changeMode"/>
+
+    {{profile}}
     
     <Projects v-if="mode === 'projects'" />
 
@@ -12,12 +14,13 @@
 
 <script>
 // @ is an alias to /src
-import Header from "@/components/Header.vue";
-import Projects from "@/components/Projects.vue";
-import CV from "@/components/CV.vue";
+import Header from '@/components/Header.vue';
+import Projects from '@/components/Projects.vue';
+import CV from '@/components/CV.vue';
+import axios from 'axios';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     Header,
     Projects,
@@ -25,17 +28,21 @@ export default {
   },
   data() {
     return {
-      mode: "projects"
+      mode: 'projects',
+      profile: 'My portfolio is still in development. There will be some evidence of my coding projects here, once I have decided how best to present them.',
+      projects: [],
+      jobs: []
     }
   },
   methods: {
     changeMode() {
-      if (this.mode === "projects") {
-        this.mode = "CV";
-      } else {
-        this.mode = "projects";
-      }
+      this.mode = this.mode === 'projects' ? 'CV' : 'projects';
     }
+  },
+  created () {
+    axios.get()
+    .then()
+    .catch();
   }
 };
 </script>
