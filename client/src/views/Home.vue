@@ -3,7 +3,7 @@
     
     <Header :mode="mode" @updateMode="changeMode"/>
 
-    {{profile}}
+    {{bio}}
     
     <Projects v-if="mode === 'projects'" />
 
@@ -17,7 +17,7 @@
 import Header from '@/components/Header.vue';
 import Projects from '@/components/Projects.vue';
 import CV from '@/components/CV.vue';
-import axios from 'axios';
+import api from '@/services/api.js'
 
 export default {
   name: 'Home',
@@ -29,7 +29,8 @@ export default {
   data() {
     return {
       mode: 'projects',
-      profile: 'My portfolio is still in development. There will be some evidence of my coding projects here, once I have decided how best to present them.',
+      bio: 'My portfolio is still in development. There will be some evidence of my coding projects here, once I have decided how best to present them.',
+      fullProfile: {},
       projects: [],
       jobs: []
     }
@@ -39,10 +40,15 @@ export default {
       this.mode = this.mode === 'projects' ? 'CV' : 'projects';
     }
   },
+  watch: {
+    fullProfile: function() {
+      this.jobs = this.fullProfile.work;
+    }
+  },
   created () {
-    axios.get()
-    .then()
-    .catch();
+    api.get('/')
+    .then(response => this.fullProfile = response.data)
+    .catch(error => console.log(error));
   }
 };
 </script>
