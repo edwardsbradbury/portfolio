@@ -1,13 +1,15 @@
 <template>
   <div class='home'>
     
-    <Header :mode="mode" @updateMode="changeMode"/>
+    <Header :mode='mode' @updateMode='changeMode'/>
 
-    {{bio}}
+    <div id='bio'>
+      {{bio}}
+    </div>
     
-    <Projects v-if="mode === 'projects'" />
+    <Projects v-if="mode === 'projects'" :projects='projects' />
 
-    <CV v-else-if="mode === 'CV'" />
+    <CV v-else-if="mode === 'CV'" :jobs='jobs' />
 
   </div>
 </template>
@@ -29,7 +31,7 @@ export default {
   data() {
     return {
       mode: 'projects',
-      bio: 'My portfolio is still in development. There will be some evidence of my coding projects here, once I have decided how best to present them.',
+      bio: '',
       fullProfile: {},
       projects: [],
       jobs: []
@@ -42,6 +44,7 @@ export default {
   },
   watch: {
     fullProfile: function() {
+      this.bio = this.fullProfile.basics.summary;
       this.jobs = this.fullProfile.work;
     }
   },

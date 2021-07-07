@@ -1,13 +1,13 @@
 <template>
-  <div class="">
+  <div class=''>
 
   </div>
 </template>
 
 <script>
 export default {
-  name: "",
-  props: {},
+  name: '',
+  props: [],
 };
 </script>
 
