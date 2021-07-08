@@ -4,7 +4,11 @@
     <Header :mode='mode' @updateMode='changeMode'/>
 
     <div id='bio'>
-      {{bio}}
+      Passionate software developer with intermediate level skills in Java SE, Java Swing and intermediate to advanced level skills in JavaScript (Node, Express, Passport, Vue, EJS and vanilla JS. Currently learning React through Codecademy too).<br><br>
+
+      Recently finished my second year of undergraduate studies and am seeking a work placement year in software engineering, either for desktop or for the web. During the 2020-21 academic year, I developed Java desktop applications with Swing GUIs and a full-stack JavaScript web application, which can be found <a href='https://lessonup.herokuapp.com/' target='_blank'>here</a> (opens in new window). I'm eager to undertake a work placement to hone my skills through applying them to real world problems; also hoping to experience the practicalities of test-driven development and applying Agile methodologies.<br><br>
+
+      Hobbies include motorcycles, cross-country cycling and kayaking on waterways.<br><br>
     </div>
     
     <Projects v-if="mode === 'projects'" :projects='projects' />
@@ -44,7 +48,7 @@ export default {
   },
   watch: {
     fullProfile: function() {
-      this.bio = this.fullProfile.basics.summary;
+      // this.bio = this.fullProfile.basics.summary;
       this.jobs = this.fullProfile.work;
     }
   },

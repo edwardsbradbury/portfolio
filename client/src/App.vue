@@ -22,8 +22,17 @@
 
 #bio {
   padding-top: 1%;
-  padding-left: 25%;
-  padding-right: 25%;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.project {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+.project table {
+  padding-top: 1%;
 }
 
 .cvSection {
