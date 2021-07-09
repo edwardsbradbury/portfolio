@@ -4,11 +4,11 @@
     <h2>My projects</h2>
 
     <div class='project'>
-      <h3>Java Swing todo organiser GUI</h3>
+      <h3>Java Swing todo organiser</h3>
       <table>
         <tr>
           <td>
-            A todo task organiser for desktop, written in Java JDK 15, using the Swing library for the GUI.<br><br>
+            A todo task organiser for desktop, written in Java JDK 15, using the Swing library for the user interface.<br><br>
             Developed for university coursework, for my second year programming module. Working with a file chooser component and also writing output to an external file were new things I learned to complete this.<br><br>
             This coursework scored me 98%; the marker's feedback is in the GitHub repo.<br><br>
             <a href='https://github.com/edwardsbradbury/java-todo-application' target='_blank'>GitHub repo</a>
