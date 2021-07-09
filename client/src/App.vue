@@ -35,14 +35,18 @@
   padding-top: 1%;
 }
 
-.cvSection {
+iframe {
+  padding-left: 2%;
+}
+
+/* .cvSection {
   border: 1px solid black;
 }
 
 .job {
   padding: 0.5%;
   display: block;
-}
+} */
 
 table {
   margin: auto;

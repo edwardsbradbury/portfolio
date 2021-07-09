@@ -45,7 +45,7 @@
 <script>
 export default {
   name: 'Projects',
-  props: {},
+  // props: ['projects'],
 };
 </script>
 
