@@ -28,7 +28,7 @@
             A web-application to enable parents in the UK whose first language isn't English to help their children with their homework.<br><br>
             Vue.js user interface, served by a Node/Express server, hosted on a Heroku dyno. Calls a separate Node/Express REST API with MySQL database, hosted on Heroku. Also depends heavily on Google Cloud Translate API.<br><br>
             Developed for a university assignment in my second year, project managed and almost entirely coded by myself. It scored 86% (marker's feedback is in the GitHub repo).<br><br>
-            I taught myself Vue.js (+ Vuex state management), Passport.js (which necessitated my learning CORS configuration and secure cookies) and learned to use xios http client to complete this project.<br><br>
+            I taught myself Vue.js (+ Vuex state management), Passport.js (which necessitated my learning CORS configuration and secure cookies) and learned to use Axios http client to complete this project.<br><br>
             <a href='https://lessonup.herokuapp.com'>Lesson Up</a> (live on the web)<br><br>
             <a href='https://github.com/edwardsbradbury/lessonup' target='_blank'>GitHub repo</a><br>
           </td>
